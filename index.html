@@ -47,8 +47,12 @@
       <div class="trend-card trend-garden">
         <div class="card">
           <ul class="trend-teg-list">
-            <li class="trend-tag-item"><a class="trend-tag-link" href="#">lifestyle</a></li>
-            <li class="trend-tag-item"><a class="trend-tag-link" href="#">interior</a></li>
+            <li class="trend-tag-item">
+              <a class="trend-tag-link" href="#">lifestyle</a>
+            </li>
+            <li class="trend-tag-item">
+              <a class="trend-tag-link" href="#">interior</a>
+            </li>
           </ul>
           <h2 class="trend-title">
             <a class="trend-title-link" href="#">Сейчас в тренде: сад на подоконнике</a>
@@ -60,7 +64,9 @@
       <div class="trend-card trend-cheese">
         <div class="card">
           <ul class="trend-teg-list">
-            <li class="trend-tag-item"><a class="trend-tag-link" href="#">food</a></li>
+            <li class="trend-tag-item">
+              <a class="trend-tag-link" href="#">food</a>
+            </li>
           </ul>
           <h2 class="trend-title">
             <a class="trend-title-link" href="#">Сыры на красивых картинках из интернета: какие они на вкус?</a>
@@ -72,8 +78,12 @@
       <div class="trend-card trend-hike">
         <div class="card">
           <ul class="trend-teg-list">
-            <li class="trend-tag-item"><a class="trend-tag-link" href="#">lifestyle</a></li>
-            <li class="trend-tag-item"><a class="trend-tag-link" href="#">travel</a></li>
+            <li class="trend-tag-item">
+              <a class="trend-tag-link" href="#">lifestyle</a>
+            </li>
+            <li class="trend-tag-item">
+              <a class="trend-tag-link" href="#">travel</a>
+            </li>
           </ul>
           <h2 class="trend-title">
             <a class="trend-title-link" href="#">Собираемся в первый поход в горы</a>
@@ -85,8 +95,12 @@
       <div class="trend-card trend-lemon">
         <div class="card">
           <ul class="trend-teg-list">
-            <li class="trend-tag-item"><a class="trend-tag-link" href="#">food</a></li>
-            <li class="trend-tag-item"><a class="trend-tag-link" href="#">health</a></li>
+            <li class="trend-tag-item">
+              <a class="trend-tag-link" href="#">food</a>
+            </li>
+            <li class="trend-tag-item">
+              <a class="trend-tag-link" href="#">health</a>
+            </li>
           </ul>
           <h2 class="trend-title">
             <a class="trend-title-link" href="#">Сейчас в тренде: сколько витамина С в лимонах?</a>
@@ -96,7 +110,7 @@
     </div>
   </section>
 
-
+<!-- Главная часть с новостями -->
 <main class="main">
   <section class="news-list">
     <article class="news-list-item">
@@ -196,6 +210,188 @@
       </div>
     </article>
   </section>
+
+  <!-- Колонка сбоку Новые посты-->  
+  <aside class="sidebar">
+    <section class="latest-post">
+      <h3 class="sidebar-title">Новые посты</h3>
+      <article class="latest-post-item">
+        <img class="latest-post-pic" src="images/2.jpg" alt="Человек гуляет по берегу моря">
+        <div class="sidebar-item-info">
+          <span class="sidebar-date">14 июня 2019</span>
+          <h4 class="sidebar-item-title">
+            <a class="sidebar-item-link" href="#">10 мест, ради которых стоит проснуться</a>
+          </h4>
+        </div>
+      </article>
+      
+      <article class="latest-post-item">
+        <img class="latest-post-pic" src="images/151.jpg" alt="Девушка занимается йогой">
+        <div class="sidebar-item-info">
+          <span class="sidebar-date">14 июня 2019</span>
+          <h4 class="sidebar-item-title">
+            <a class="sidebar-item-link" href="#">Йога для домашних</a>
+          </h4>
+        </div>
+      </article>
+      
+      <article class="latest-post-item">
+        <img class="latest-post-pic" src="images/45.jpg" alt="Антикварные стул и комод">
+        <div class="sidebar-item-info">
+          <span class="sidebar-date">14 июня 2019</span>
+          <h4 class="sidebar-item-title">
+            <a class="sidebar-item-link" href="#">Как мы превратили классное место в балкон</a>
+          </h4>
+        </div>
+      </article>
+      
+      <article class="latest-post-item">
+        <img class="latest-post-pic" src="images/501.jpg" alt="Тарелки с едой">
+        <div class="sidebar-item-info">
+          <span class="sidebar-date">14 июня 2019</span>
+          <h4 class="sidebar-item-title">
+            <a class="sidebar-item-link" href="#">Кулинарный подход к науке</a>
+          </h4>
+        </div>
+      </article>
+      
+      <article class="latest-post-item">
+        <img class="latest-post-pic" src="images/7.jpg" alt="3 девушки с длинными распущенными волосами">
+        <div class="sidebar-item-info">
+          <span class="sidebar-date">14 июня 2019</span>
+          <h4 class="sidebar-item-title">
+            <a class="sidebar-item-link" href="#">Лучшие прически для распущенных волос</a>
+          </h4>
+        </div>
+      </article>
+      
+      <!-- Поисковик сбоку-->
+      <form class="search">
+        <label class="search-options">
+          <input type="text" class="searching-row" placeholder="Найти...">
+        </label>
+        <button class="searching-icon" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512" width="24" height="24">
+            <g clip-path="url(#clip0)">
+              <path fill="#fff" stroke="#B59F5B" d="M373.403 339.292l-.29.344.312.324 121.857 126.737c10.117 10.524 9.782 27.302-.733 37.42l.347.36-.347-.36c-4.948 4.763-11.466 7.383-18.338 7.383-7.261 0-14.034-2.884-19.072-8.116L334.357 375.686l-.297-.309-.351.246c-34.78 24.442-75.457 37.317-118.145 37.317-113.708 0-206.22-92.513-206.22-206.22C9.344 93.012 101.856.5 215.564.5c113.707 0 206.22 92.512 206.22 206.22 0 48.668-17.125 95.416-48.381 132.572zm-4.546-132.572c0-84.528-68.765-153.293-153.293-153.293S62.271 122.192 62.271 206.72s68.765 153.293 153.293 153.293 153.293-68.765 153.293-153.293z"/>
+            </g>
+            <defs>
+              <clipPath id="clip0">
+                <path fill="#fff" d="M0 0h512v512H0z"/>
+              </clipPath>
+            </defs> 
+          </svg>
+        </button>
+      </form>
+      
+      <!-- Форма для подписки-->
+      <article class="subscribe-form">
+        <h3 class="sidebar-title">рассылка</h3>
+        <form class="subscribe">
+          <label class="subscribe-options">
+            <input type="email" class="subscribing-row" placeholder="Ваш email-адрес">
+          </label>
+          <button class="subscribe-button">подписаться</button>
+        </form>
+      </article>
+      
+      <!-- Все теги-->
+      <article class="all-tags">
+        <h3 class="sidebar-title">теги</h3>
+        <ul class="tags-list">
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">fashion</a>
+          </li>
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">music</a>
+          </li>
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">lifestyle</a>
+          </li>
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">art</a>
+          </li>
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">interior</a>
+          </li>
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">travel</a>
+          </li>
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">food</a>
+          </li>
+          <li class="tags-list-item">
+            <a class="tags-list-link" href="#">health</a>
+          </li>
+        </ul>
+      </article>
+      
+      <!-- Темы-->
+      <article class="all-categories">
+        <h3 class="sidebar-title">темы</h3>
+        <ul class="categories-list">
+          <li class="categories-list-item">
+            <a class="categories-item-link" href="#">Красота</a>
+            <span class="categories-count">12</span>
+          </li>
+          <li class="categories-list-item">
+            <a class="categories-item-link" href="#">Здоровье</a>
+            <span class="categories-count">4</span>
+          </li>
+          <li class="categories-list-item">
+            <a class="categories-item-link" href="#">Образ жизни</a>
+            <span class="categories-count">145</span>
+          </li>
+          <li class="categories-list-item">
+            <a class="categories-item-link" href="#">Музыка</a>
+            <span class="categories-count">28</span>
+          </li>
+          <li class="categories-list-item">
+            <a class="categories-item-link" href="#">Спорт</a>
+            <span class="categories-count">62</span>
+          </li>
+          <li class="categories-list-item">
+            <a class="categories-item-link" href="#">Йога</a>
+            <span class="categories-count">8</span>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </aside>
+</main>
+
+<!-- Товары-->
+
+
+
+
+
+<!-- Подвал-->
+<footer class="footer">
+  <div class="social-media">
+    <div class="social-icon">
+      <a class="social-media-link" href="#">
+        <img src="svg/001-dribbble.svg" alt="dribble" width="20" height="20">
+      </a>
+    </div>
+    <div class="social-icon">
+      <a class="social-media-link" href="#">
+        <img src="svg/001-pinterest.svg" alt="pinterest" width="20" height="20">
+      </a>
+    </div>
+    <div class="social-icon">
+      <a class="social-media-link" href="#">
+        <img src="svg/003-tumblr.svg" alt="tumblr" width="20" height="20">
+      </a>
+    </div>
+  </div>
+  <div class="copyrights">
+    <span class="copyright-text">Copyrights © 2009–2019 City Blog LLC.</span>
+  </div>
+</footer>
+    
+    
+
     
 </body>
 </html>
