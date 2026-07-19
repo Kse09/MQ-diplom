@@ -261,9 +261,9 @@ body {
   display: block;
 }
 
-/* .trend-title-link:hover {
+.trend-title-link:hover {
   color: #b59f5b;
-} */
+}
 
 .main {
   display: flex;
