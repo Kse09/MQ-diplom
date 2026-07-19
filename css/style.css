@@ -84,6 +84,12 @@ body {
   height: auto;
 }
 
+/* пока скрыто */
+.menu-burger {
+  position: fixed;
+  transform: scale(0);
+}
+
 /* Меню  */
 .menu {
   padding-top: 20px; 
