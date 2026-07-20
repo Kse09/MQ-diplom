@@ -44,6 +44,8 @@ body {
   flex-direction: column;
   padding: 0 35px;
   background-color: #ffffff;
+  max-width: 1660px;
+  margin: auto;
 }
 
 /* Затемнение */
@@ -65,7 +67,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 25px 15px 0; 
   position: relative;
@@ -310,11 +312,13 @@ textarea.field:focus {
   border-color: #323232;
 }
 
+/*  тренды */
 .trends {
   width: 100%;
   max-width: 100%;
   margin: 60px auto 0;
   padding: 0;
+  max-width: 1660px;
 }
 
 /* Заголовок секции */
@@ -440,16 +444,20 @@ textarea.field:focus {
   color: #b59f5b;
 }
 
-.main {
+
+/* главное  */
+.page-container {
   display: flex;
-  width: 1200px;
-  margin: auto;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 63px 15px;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 1 1 auto; /* занимает все свободное место */
+  min-width: 0;
 }
 
 .news-list {
@@ -548,9 +556,8 @@ p {
 
 /* боковая колонка */
 .sidebar {
-  display: flex;
-  min-width: 270px;
-  flex-direction: column;
+  flex: 0 0 270px;
+  max-width: 270px;
 }
 
 .sidebar-title {
@@ -773,11 +780,11 @@ p {
 
 /* магазин с товарами */
 .shop-container {
-  margin-top: 64px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px 15px 60px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .shop-title {
@@ -913,22 +920,26 @@ p {
 .footer {
   width: 1200px;
   margin: auto;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 64px;
-  padding-top: 64px;
+  padding: 64px 15px;
 }
 
 .social-media {
-  display: flex;
   background-color: #f3f7f5;
-  align-items: center;
-  justify-content: center;
   padding: 30px;
 }
 
-.social-icon:nth-child(n + 2) {
-  margin-left: 30px;
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-media-link {
