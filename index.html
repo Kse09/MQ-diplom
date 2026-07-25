@@ -12,10 +12,11 @@
       <a href="#" class="logo">
         <img src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" alt="Логотип noemi">
       </a>
-      <button class="menu-burger">
-        <span class="menu-burger-label">открыть меню</span>
-      </button>
+      
       <nav class="menu">
+        <button class="menu-burger">
+          <span class="menu-burger-label">открыть меню</span>
+        </button>
         <ul class="menu-list">
           <li class="menu-list-item">
             <a href="#0" class="menu-link">Главная</a>
@@ -37,7 +38,7 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </div class="main-title-wrapper">
     <h1 class="main-title">Блог о творчестве, спорте,<br> и образе жизни</h1>
   </header>
 
@@ -84,7 +85,7 @@
     </div>
   </div>
 
-  <!-- тренды-->
+<!-- тренды-->
 <section class="trends">
   <h2 class="trend-title-main">Сейчас в тренде</h2>
   <div class="trend-cards-wrapper">
@@ -152,9 +153,9 @@
           </h2>
         </div>
       </div>
-
     </div>
   </section>
+
 
 <!-- Обернула тегом div теги main и aside, тк не очень понимаю как адекватно сделать sidebar по-другому,чтобы ничего не съезжало-->
 <div class="page-container">
@@ -177,9 +178,13 @@
             <h2 class="news-list-title">
               <a class="news-list-link" href="#">10 мест, ради которых стоит проснуться на рассвете</a>
             </h2>
-            <time class="date-of-post">10 июня 2019</time>
-            <span class="author">Неизвестный автор</span>
+            <div class="news-date-author">
+              <time class="date-of-post">10 июня 2019</time>
+              <span class="author">Неизвестный автор</span>
+            </div>
+            <div class="text-news">
             <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города... Музеи еще закрыты. Что посмотреть?</p>
+            </div>
           </div>
         </article>
         <article class="news-list-item">
@@ -196,9 +201,13 @@
             <h2 class="news-list-title">
               <a class="news-list-link" href="#">Йога для начинающих в домашних условиях</a>
             </h2>
-            <time class="date-of-post">10 июня 2019</time>
-            <span class="author">Неизвестный автор</span>
+            <div class="news-date-author">
+              <time class="date-of-post">10 июня 2019</time>
+              <span class="author">Неизвестный автор</span>
+            </div>
+            <div class="text-news">
             <p>Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.</p>
+            </div>
           </div>
         </article>
         <article class="news-list-item">
@@ -212,10 +221,14 @@
             <h2 class="news-list-title">
               <a class="news-list-link" href="#">Лучшие музыкальные фестивали этого лета</a>
             </h2>
-            <time class="date-of-post">10 июня 2019</time>
-            <span class="author">Неизвестный автор</span>
+            <div class="news-date-author">
+              <time class="date-of-post">10 июня 2019</time>
+              <span class="author">Неизвестный автор</span>
+            </div>
+            <div class="text-news">
             <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
             <p>Мы составили список лучших фестивалей по всему миру.</p>
+            </div>
           </div>
         </article>
         <article class="news-list-item">
@@ -232,9 +245,13 @@
             <h2 class="news-list-title">
               <a class="news-list-link" href="#">Наукоёмкий подход к кулинарии</a>
             </h2>
-            <time class="date-of-post">10 июня 2019</time>
-            <span class="author">Неизвестный автор</span>
+            <div class="news-date-author">
+              <time class="date-of-post">10 июня 2019</time>
+              <span class="author">Неизвестный автор</span>
+            </div>
+            <div class="text-news">
             <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
+            </div>
           </div>
         </article>
         <article class="news-list-item">
@@ -254,9 +271,13 @@
             <h2 class="news-list-title">
               <a class="news-list-link" href="#">Делаем модные принты на подушках для интерьера</a>
             </h2>
-            <time class="date-of-post">10 июня 2019</time>
-            <span class="author">Неизвестный автор</span>
+            <div class="news-date-author">
+              <time class="date-of-post">10 июня 2019</time>
+              <span class="author">Неизвестный автор</span>
+            </div>
+            <div class="text-news">
             <p>Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
+            </div>
           </div>
         </article>
       </div>
@@ -418,7 +439,12 @@
   <div class="shop-cards-block">
       <!-- Карточка с подушкой-->
 			<div class="shop-card">
-				<img class="shop-item-pic" src="images/shop-item-desk1.jpg" alt="подушка">
+        <picture>
+					<source media="(min-width: 1200px)" srcset="images/shop-item-desk1.jpg">
+					<source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet1.jpg">
+					<source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
+				  <img class="shop-item-pic" src="images/shop-item-desk1.jpg" alt="подушка">
+        </picture>
 				<div class="shop-item-info">
 					<h2 class="shop-item-title">Подушки на диван</h2>
 					<p class="shop-item-text">Набор из двух подушек с модными принтами. Видео о создании <a class="shop-item-link" href="#0">здесь</a>.</p>
@@ -431,7 +457,12 @@
 			</div>
       <!-- Карточка с зайчиком-->
       <div class="shop-card">
-				<img class="shop-item-pic" src="images/shop-item-desk2.jpg" alt="зайчик">
+        <picture>
+					<source media="(min-width: 1200px)" srcset="images/shop-item-desk2.jpg">
+					<source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet2.jpg">
+					<source media="(max-width: 640px)" srcset="images/shop-item-mobile2.jpg">
+				  <img class="shop-item-pic" src="images/shop-item-desk2.jpg" alt="зайчик">
+        </picture>
 				<div class="shop-item-info">
 					<h2 class="shop-item-title">Кукла "Зайчик"</h2>
 					<p class="shop-item-text">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a class="shop-item-link" href="#0">весенняя серия постов</a> в блоге и несколько подкачтов.</p>
@@ -443,7 +474,12 @@
 			</div>
       <!-- Карточка с рамкой-->
       <div class="shop-card">
-				<img class="shop-item-pic" src="images/shop-item-desk3.jpg" alt="рамка">
+        <picture>
+					<source media="(min-width: 1200px)" srcset="images/shop-item-desk3.jpg">
+					<source media="(min-width: 641px) and (max-width: 1199px)" srcset="images/shop-item-tablet3.jpg">
+					<source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg">
+				  <img class="shop-item-pic" src="images/shop-item-desk3.jpg" alt="рамка">
+        </picture>
 				<div class="shop-item-info">
 					<h2 class="shop-item-title">Шестиугольная рамка</h2>
 					<p class="shop-item-text">Необычная рамка для украшения дома из видео <a class="shop-item-link" href="#0">"Как сделать рамку из подручных средств за 30 минут"</a></p>

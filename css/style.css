@@ -89,7 +89,7 @@ body {
 /* пока скрыто */
 .menu-burger {
   position: fixed;
-  transform: scale(0);
+  /* transform: scale(0); */
 }
 
 /* Меню  */
@@ -918,7 +918,7 @@ p {
 
 /* подвал */
 .footer {
-  width: 1200px;
+  
   margin: auto;
   padding: 64px 15px;
 }
@@ -962,3 +962,484 @@ p {
   color: #999999;
   font-weight: bold;
 }
+
+@media (min-width: 1200px) {
+  .menu-burger {
+    display: none;
+  }
+  
+  .footer {
+    width: 1200px;
+  }
+}
+
+/*бургер меню появляется на смартфонах*/
+@media (max-width: 1199px) {
+  .menu {
+    display: flex;
+  }
+  .menu-list {
+    display: none;
+  }
+  
+  .menu-burger {
+    border: none;
+    width: 22px;
+    height: 19px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .menu-burger-label, .menu-burger-label:before, .menu-burger-label:after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+  }
+  
+  .menu-burger-label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+  }
+  
+  .menu-burger-label:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /*скрывает надпись "открыть меню"*/
+  .menu-burger-label {
+    font-size: 0;
+    line-height: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+  .header {
+    background-image: url("../images/banner-bg-tablet.jpg");
+    padding-top: 45px;
+  }
+  
+  .news-list-item {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .news-list-title {
+    font-size: 17px;
+  }
+
+  
+  .news-list-pic {
+    width: 100%;
+    min-width: 0;
+    max-width: 380px;
+  }
+  
+  .news-post {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .page-container {
+    display: flex;
+    padding: 30px 15px;
+    align-items: flex-start;
+  }
+  
+  .main {
+    width: 100%;
+    max-width: 100%;
+    
+  }
+
+  .news-list {
+    min-width: auto;
+    width: 100%;
+    margin-right: 0;
+   
+  }
+
+  .sidebar {
+    flex: 0 0 270px;
+  }
+  
+  .search {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 40px;
+  }
+
+  .searching-row {
+    width: 100%;
+    height: 48px;
+  }
+
+  .searching-icon {
+    width: 100%;
+    height: 48px;
+    margin-top: 5px;
+  }
+
+   .subscribe-form {
+    margin-top: 40px;
+  }
+
+  .subscribing-row {
+    width: 100%;
+    height: 48px;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+  }
+
+
+}
+
+
+
+/* карточки товара в колонку */
+@media (max-width: 760px) {
+  .shop-card {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .shop-cards-block {
+    flex-direction: column;
+  
+  }
+}
+
+/* карточки товара по 2 в ряд */
+@media (min-width: 761px) and (max-width: 1199px) {
+  .shop-cards-block {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px 20px;
+  }
+
+  .shop-card {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .shop-item-pic {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-top, .page-container, .footer, .trend-card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .header {
+    background-image: url("../images/banner-mobile.jpg");
+    padding-top: 30px;
+    padding-bottom: 210px;
+    height: 638px;
+  }
+  
+  .header-top {
+    flex-direction: column-reverse;
+  }
+  
+  .menu {
+    align-self: flex-end;
+  }
+
+  .logo {
+    width: 270px;
+    margin: 175px 0 28px 0;
+  }
+  
+  .main-title-wrapper {
+    padding: 0 30px;
+    margin-top: 0;
+  }
+  
+  .main-title {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+  
+  .trends {
+    margin-top: 40px;
+  }
+  
+  .trend-title {
+    font-size: 16px;
+  }
+  
+  .trend-cards-wrapper, .news-list-item, .shop-cards-block {
+    flex-direction: column;
+  }
+
+  .page-container {
+    flex-direction: column;
+    padding: 30px 15px;
+    align-items: center;
+  }
+  
+  .main {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .trend-card {
+    width: 100%;
+    min-height: 232px;
+    margin-top: 3px;
+  }
+  
+  .card {
+    padding: 26px 20px;
+  }
+  
+  .trend-title {
+    margin-top: 9px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  
+  .page-container {
+    margin-top: 45px;
+  }
+  
+  .news-list-item {
+    border-bottom: 3px #eeeeee solid;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 23px;
+  }
+
+   .news-list {
+    min-width: auto;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .news-list-item:nth-child(n+2) {
+    margin-top: 35px;
+  }
+  
+  .news-list-pic {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .news-list-title {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-top: 8px;
+  }
+  
+
+   .news-post {
+    width: 100%;
+    margin-top: 0;
+  }
+
+   .news-post-tag {
+    flex-wrap: wrap;
+  }
+
+  
+  .news-date-author {
+    margin-top: 12px;
+  }
+
+  .text-news p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    padding: 0 10px;
+    line-height: 1.4;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+  }
+  
+
+  .sidebar {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .search {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 40px;
+  }
+
+  .searching-row {
+    width: 100%;
+    height: 48px;
+  }
+
+  .searching-icon {
+    width: 100%;
+    height: 48px;
+    margin-top: 5px;
+  }
+
+   .subscribe-form {
+    margin-top: 40px;
+  }
+
+  .subscribing-row {
+    width: 100%;
+    height: 48px;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    height: 48px;
+    margin-top: 10px;
+  }
+  
+  .sidebar-title {
+    font-size: 16px;
+  }
+
+  .sidebar-title:after {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .latest-post:nth-child(n+2) {
+    margin-top: 40px;
+  }
+
+  /* Темы */
+  .all-categories {
+    margin-top: 40px;
+  }
+
+  .categories-list-item {
+    justify-content: left;
+  }
+
+  .categories-item-link {
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .categories-count {
+    line-height: 32px;
+  }
+
+
+  .shop-container {
+    margin-top: 30px;
+  }
+  
+  .shop-cards-block {
+    margin-top: 30px;
+  }
+  
+  .shop-card {
+    align-items: center;
+    margin-bottom: 55px;
+  }
+  
+  .shop-item-info {
+    width: 100%;
+    margin-top: -12px;
+    padding-top: 25px;
+  }
+  
+  .shop-item-title {
+    font-size: 17px;
+  }
+  
+  .footer {
+    margin-top: 15px;
+  }
+  
+  .copyrights {
+    margin: 45px auto 45px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .trends {
+    margin-top: 40px;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .trend-title-main {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .trend-title-main::after {
+    width: 55px;
+    height: 3px;
+  }
+
+  .trend-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .trend-card {
+    min-height: 260px;
+    margin-bottom: 0;
+  }
+
+  .card {
+    padding: 20px 24px 20px;
+    margin: 12px 16px 12px;
+  }
+
+  .trend-title {
+    font-size: 17px;
+  }
+
+  .trend-tag-link {
+    font-size: 13px;
+  }
+}
+
+/* тренды для моб телефонов */
+@media (max-width: 640px) and (orientation: landscape) {
+  .trend-cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trend-card {
+    min-height: 200px;
+  }
+
+  .card {
+    padding: 14px 16px 14px;
+    margin: 8px 10px 8px;
+  }
+
+  .trend-teg-list {
+    gap: 6px;
+  }
+
+}
+
+
