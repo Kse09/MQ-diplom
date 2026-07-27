@@ -44,7 +44,6 @@ body {
   flex-direction: column;
   padding: 0 35px;
   background-color: #ffffff;
-  max-width: 1660px;
   margin: auto;
 }
 
@@ -318,7 +317,7 @@ textarea.field:focus {
   max-width: 100%;
   margin: 60px auto 0;
   padding: 0;
-  max-width: 1660px;
+  
 }
 
 /* Заголовок секции */
@@ -918,7 +917,6 @@ p {
 
 /* подвал */
 .footer {
-  
   margin: auto;
   padding: 64px 15px;
 }
@@ -953,7 +951,7 @@ p {
 }
 
 .copyrights {
-  margin-top: 72px;
+  margin: 64px auto 64px;
   text-align: center;
 }
 
@@ -963,17 +961,14 @@ p {
   font-weight: bold;
 }
 
+/* бургер меню скрыт на десктопе */
 @media (min-width: 1200px) {
   .menu-burger {
     display: none;
   }
-  
-  .footer {
-    width: 1200px;
-  }
 }
 
-/*бургер меню появляется на смартфонах*/
+/*бургер меню появляется на смартфонах и планшетах*/
 @media (max-width: 1199px) {
   .menu {
     display: flex;
@@ -989,6 +984,7 @@ p {
     background-color: transparent;
     position: relative;
     cursor: pointer;
+    margin-right: -13px;
   }
   
   .menu-burger-label, .menu-burger-label:before, .menu-burger-label:after {
@@ -1020,27 +1016,139 @@ p {
   }
 }
 
+/* тренды для моб телефонов */
+@media (max-width: 640px) and (orientation: landscape) {
+  .trend-cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trend-card {
+    min-height: 200px;
+  }
+
+  .card {
+    padding: 14px 16px 14px;
+    margin: 8px 10px 8px;
+  }
+
+  .trend-teg-list {
+    gap: 6px;
+  }
+
+}
+
+/* Десктопная версия, правки к ней, которые не должны автоматом перейти на смартфон/планшет */
+@media (min-width: 1200px) {
+.shop-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .shop-cards-block {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .shop-card {
+    min-width: 0;
+    flex: 0 0 auto;
+    width: 347px;
+    max-width: 347px;
+    padding: 0 20px; 
+  }
+
+  .shop-item-pic {
+    max-width: 100%;
+  }
+
+  .shop-item-info {
+    max-width: 100%;
+  }
+
+  .shop-card:not(:last-child) {
+    margin-right: 27px; 
+  }
+
+  /* подвал */
+  .footer {
+    width: 1200px;
+  }
+}
+
+/* Верстка планшетов */
 @media (min-width: 641px) and (max-width: 1199px) {
+  /* шапка */
   .header {
     background-image: url("../images/banner-bg-tablet.jpg");
     padding-top: 45px;
   }
+
+  .logo {
+    margin-left: -12px;
+  }
+
+  /*  тренды*/
+  .trends {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+
+  .trend-title-main {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .trend-title-main::after {
+    width: 55px;
+    height: 3px;
+  }
+
+  .trend-cards-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .trend-card {
+    min-height: 260px;
+    margin-bottom: 0;
+  }
+
+  .card {
+    padding: 20px 24px 20px;
+    margin: 12px 16px 12px;
+  }
+
+  .trend-title {
+    font-size: 17px;
+  }
+
+  .trend-tag-link {
+    font-size: 13px;
+  }
+
+  /* Главное + сайдбар */
+  .page-container {
+    display: flex;
+    padding: 30px 36px;
+    align-items: flex-start;
+  }
   
+  /* Главное новости */
   .news-list-item {
     display: flex;
     flex-direction: column;
-    
   }
 
   .news-list-title {
     font-size: 17px;
+    margin-right: 36px;
   }
 
-  
   .news-list-pic {
     width: 100%;
-    min-width: 0;
-    max-width: 380px;
+    padding-right: 36px;
   }
   
   .news-post {
@@ -1048,46 +1156,43 @@ p {
     margin-top: 10px;
   }
 
-  .page-container {
-    display: flex;
-    padding: 30px 15px;
-    align-items: flex-start;
-  }
-  
   .main {
     width: 100%;
     max-width: 100%;
-    
   }
 
   .news-list {
     min-width: auto;
     width: 100%;
-    margin-right: 0;
-   
+    margin-right: 36px;  
   }
 
+  .text-news {
+    margin-right: 36px;
+  }
+
+  /* Сайдбар */
   .sidebar {
     flex: 0 0 270px;
   }
   
+  /* Поисковик */
   .search {
-    flex-direction: column;
     align-items: stretch;
-    margin-top: 40px;
+    margin-top: 60px;
   }
 
   .searching-row {
-    width: 100%;
+    width: 221px;
     height: 48px;
   }
 
   .searching-icon {
     width: 100%;
     height: 48px;
-    margin-top: 5px;
   }
 
+  /* Подписка */
    .subscribe-form {
     margin-top: 40px;
   }
@@ -1100,45 +1205,92 @@ p {
   .subscribe-button {
     width: 100%;
     height: 48px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
+  /* магазин */
+  .shop-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-}
+  .shop-cards-block {
+    padding: 0 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+  }
 
-
-
-/* карточки товара в колонку */
-@media (max-width: 760px) {
   .shop-card {
+    min-width: 0;
     width: 100%;
-    margin-bottom: 50px;
-  }
-  .shop-cards-block {
-    flex-direction: column;
-  
-  }
-}
-
-/* карточки товара по 2 в ряд */
-@media (min-width: 761px) and (max-width: 1199px) {
-  .shop-cards-block {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px 20px;
-  }
-
-  .shop-card {
-    flex: 0 0 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+    max-width: 100%;
+    padding: 0;
   }
 
   .shop-item-pic {
     max-width: 100%;
+    width: 100%;
+  }
+
+  .shop-item-info {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    outline-offset: 0;
+  }
+
+  .shop-item-title {
+    font-size: 17px;
+  }
+
+  .shop-item-text {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 17px;
+  }
+
+  .old-price {
+    font-size: 12px;
+    bottom: 22px;
+  }
+
+  .shop-button {
+    width: 120px;
+    padding: 8px 0;
+    font-size: 12px;
+  }
+
+  .shop-price-wrapper {
+    min-height: 48px;
+    margin-top: 18px;
+  }
+
+  .shop-item-info {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 29px;
+    padding-bottom: 0;
+  }
+
+  /* подвал */
+  .footer {
+    margin: auto;
+    padding: 50px 35px;
+  }
+
+  .copyrights {
+    margin: 45px auto 36px;
+    text-align: center;
   }
 }
 
+/* Верстка мобильной версии */
 @media (max-width: 640px) {
+  /* шапка */
   .header-top, .page-container, .footer, .trend-card {
     padding-left: 15px;
     padding-right: 15px;
@@ -1174,6 +1326,7 @@ p {
     line-height: 1.4;
   }
   
+  /* тренды  */
   .trends {
     margin-top: 40px;
   }
@@ -1182,39 +1335,38 @@ p {
     font-size: 16px;
   }
   
-  .trend-cards-wrapper, .news-list-item, .shop-cards-block {
-    flex-direction: column;
-  }
-
-  .page-container {
-    flex-direction: column;
-    padding: 30px 15px;
-    align-items: center;
-  }
-  
-  .main {
-    width: 100%;
-    max-width: 100%;
-  }
-  
   .trend-card {
     width: 100%;
     min-height: 232px;
     margin-top: 3px;
   }
-  
-  .card {
-    padding: 26px 20px;
-  }
-  
+
   .trend-title {
     margin-top: 9px;
     font-size: 16px;
     line-height: 1.25;
   }
+
+  .card {
+    padding: 26px 20px;
+  }
   
+  .trend-cards-wrapper, .news-list-item, .shop-cards-block {
+    flex-direction: column;
+  }
+
+  /* главное + сайдбар */
   .page-container {
+    flex-direction: column;
+    padding: 30px 15px;
+    align-items: center;
     margin-top: 45px;
+  }
+  
+  /* Главное новости*/
+  .main {
+    width: 100%;
+    max-width: 100%;
   }
   
   .news-list-item {
@@ -1248,7 +1400,6 @@ p {
     margin-top: 8px;
   }
   
-
    .news-post {
     width: 100%;
     margin-top: 0;
@@ -1258,7 +1409,6 @@ p {
     flex-wrap: wrap;
   }
 
-  
   .news-date-author {
     margin-top: 12px;
   }
@@ -1274,7 +1424,7 @@ p {
     margin-left: -10px;
   }
   
-
+/* сайдбар*/
   .sidebar {
     flex: 0 0 auto;
     max-width: 100%;
@@ -1282,11 +1432,18 @@ p {
     margin-top: 50px;
   }
   
+  /* поисковик*/
   .search {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     margin-top: 40px;
+    display: flex;
+    width: 100%; ;
   }
+
+  .search-options {
+  flex: 1; 
+  display: flex; }
 
   .searching-row {
     width: 100%;
@@ -1294,12 +1451,12 @@ p {
   }
 
   .searching-icon {
-    width: 100%;
+    width: 48px;
     height: 48px;
-    margin-top: 5px;
   }
 
-   .subscribe-form {
+  /* подписка*/
+  .subscribe-form {
     margin-top: 40px;
   }
 
@@ -1345,101 +1502,83 @@ p {
     line-height: 32px;
   }
 
-
+  /* Магазин */
   .shop-container {
-    margin-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
   }
-  
+
   .shop-cards-block {
-    margin-top: 30px;
-  }
-  
-  .shop-card {
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 55px;
-  }
-  
-  .shop-item-info {
-    width: 100%;
-    margin-top: -12px;
-    padding-top: 25px;
-  }
-  
-  .shop-item-title {
-    font-size: 17px;
-  }
-  
-  .footer {
-    margin-top: 15px;
-  }
-  
-  .copyrights {
-    margin: 45px auto 45px;
-    text-align: center;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1200px) {
-  .trends {
-    margin-top: 40px;
-    max-width: 100%;
     padding: 0 15px;
+    gap: 40px;
   }
 
-  .trend-title-main {
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-
-  .trend-title-main::after {
-    width: 55px;
-    height: 3px;
-  }
-
-  .trend-cards-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
-  }
-
-  .trend-card {
-    min-height: 260px;
+  .shop-card {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
     margin-bottom: 0;
   }
 
-  .card {
-    padding: 20px 24px 20px;
-    margin: 12px 16px 12px;
+  .shop-item-pic {
+    max-width: 100%;
+    width: 100%;
   }
 
-  .trend-title {
-    font-size: 17px;
+  .shop-item-info {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    outline-offset: 0;
   }
 
-  .trend-tag-link {
+  .shop-item-info {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 29px;
+    padding-bottom: 0;
+  }
+
+  .shop-item-title {
+    font-size: 16px;
+  }
+
+  .shop-item-text {
     font-size: 13px;
   }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .old-price {
+    font-size: 12px;
+    bottom: 22px;
+  }
+
+  .shop-button {
+    width: 120px;
+    padding: 8px 0;
+    font-size: 12px;
+  }
+
+  .shop-price-wrapper {
+    min-height: 48px;
+    margin-top: 18px;
+  }
+  
+ /* подвал */
+  .footer {
+    margin: auto;
+    padding: 42px 14px;
+  }
+
+  .copyrights {
+    margin: 45px auto 45px;
+    text-align: center;
+  }  
 }
-
-/* тренды для моб телефонов */
-@media (max-width: 640px) and (orientation: landscape) {
-  .trend-cards-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .trend-card {
-    min-height: 200px;
-  }
-
-  .card {
-    padding: 14px 16px 14px;
-    margin: 8px 10px 8px;
-  }
-
-  .trend-teg-list {
-    gap: 6px;
-  }
-
-}
-
-
